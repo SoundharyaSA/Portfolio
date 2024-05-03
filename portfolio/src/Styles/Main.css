@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    display: flex;
+    align-items: center;
+    /* height: 80vh; */
+    max-width: 1300px !important;
+    margin: auto auto;
+    position: relative;
+    /* width: 100%; */
+    margin-top: 6rem;
+    margin-left: 4rem;
+}
+.main::after,
+.main::before{
+    content: "";
+    width: 28.125rem;
+    height: 28.125rem;
+    border-radius: 28.125rem;
+    background-color: #7c66e3;
+    position: absolute;
+    z-index: -1;
+    filter: blur(240px);
+}
+.main::after{
+    top: -3rem;
+    left: -5rem;
+}
+.main::before{
+    bottom: 2rem;
+    right: 0rem;
+}
+.bothmain{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+.leftmain{
+    display: flex;
+     flex-direction: column;
+    flex: 1;
+    gap: 2px;
+}
+.leftmain>:nth-child(1){
+    font-size: 3rem;
+    font-weight: bold;
+
+}
+.leftmain>:nth-child(2){
+    font-size: 3rem;
+    font-weight: bold;
+    /* color:#63df32; */
+    /* color: #fca61f; */
+    /* color: #f5c32c; */
+    color: #d9ff02;
+}
+.leftmain>:nth-child(3){
+    /* width: 50%; */
+    font-weight: 400;
+    font-size:1rem;
+    line-height: 2rem;
+}
+.hire{
+    display: flex;
+    gap: 2rem;
+}
+#a-hire {
+    text-decoration: none;
+}
+.hire-btn{
+    margin-top: 1.5rem;
+    width: 10rem;
+    font-size: 19px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: linear-gradient(90deg, #a993fe 0%, #7e61e7 100%);
+    /* background: linear-gradient(90deg, #c4d46a 0%, #d9ff02 100%); */
+    padding: 9px 32px;
+    border: none;
+    /* outline: 9px solid transparent; */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3 ease;
+  
+}
+.hire-btn:hover{
+    color: #a993fe;
+    background: #000;
+    border: 1px solid #a993fe;
+
+}
+.sc:hover{
+    cursor: pointer;
+    transform: translateY(-0.5rem);
+    
+}
+
+
+.rightmain{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    /* margin-top: 0.5rem; */
+}
+.rightmain>div{
+   display: flex;
+   align-items: flex-end;
+   gap: 2rem;
+}
+.rightmain>div>img{
+    width: 25rem;
+    transition: all 0.3s ease;
+}
+.hero,.social>div{
+ width: 5rem;
+ height: 5rem;
+ display: flex;
+ align-items: center;
+justify-content: center;
+ text-align: center;
+ border-radius: 0.65rem;
+ border: 1.5px solid #6852ba;
+}
+.hero img{
+    width: 3rem;
+    height: auto;
+    transition: all 0.3s ease;
+}
+.rightmain>div>img:hover,
+.hero img:hover{
+    transform: translateY(-0.5rem);
+    cursor: pointer;
+}
+@media (max-width:1300px) {
+    .main{
+        padding: 0 1.5rem;
+    }
+}
+@media (max-width:1025px) {
+    .leftmain{
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+    .leftmain>:nth-child(3){
+        font-size: 0.9rem;
+        line-height: 1.6rem;
+    }
+    .rightmain>div>img{
+        width: 20rem;
+    }
+    .hero{
+        width: 4rem;
+        height: 4rem;
+    }
+    .hero img{
+        width: 2.5rem;
+    }
+    
+}
+@media (max-width:768px) {
+    .main{
+        flex-direction: column;
+        margin-top: 3rem;
+       align-items: center;
+    }
+    .rightmain{
+        margin: 2rem 0 2rem 0;
+    }
+    .leftmain{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .leftmain>*{
+        width: auto;
+        text-align: center;
+ 
+    }
+    .main::after,.main::before{
+        content: "";
+        width: 18rem;
+        height: 18rem;
+    }
+    .main::after{
+    top: 0rem;
+    left: 0rem;
+    }
+    .main::before{
+        bottom: 2rem;
+        right: 0rem;
+    }
+    .leftmain .hire-btn{
+        width: 50%;
+
+    }
+   
+}
+@media (max-width:600px){
+    .leftmain{
+        font-size: 2.2rem;
+        line-height:3rem;
+    }
+    .leftmain>:nth-child(3){
+        font-size: 0.9rem;
+        line-height: 1.3rem;
+    }
+    .rightmain{
+        gap: 1rem;
+    }
+    .rightmain>div{
+      gap: 1rem;
+    }
+    .rightmain>div>img{
+        width: 16rem;
+    }
+    .hero{
+        width: 3.3rem;
+        height: 3.3rem;
+    }
+    .hero img{
+        width: 2rem;
+    }
+}

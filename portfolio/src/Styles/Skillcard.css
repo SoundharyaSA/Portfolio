@@ -1,0 +1,57 @@
+.skillcard{
+    border-radius: 0.65rem;
+    border: 1px solid #6751b9;
+    padding: 2.5rem;
+    text-align: center;
+    background-color: rgba(22,17,47,0.398);
+    backdrop-filter: blur(1rem);
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.skillcard:hover,
+.skillcard:active{
+    background:linear-gradient(180deg,#aa94fe 0%,#7c5fe6 100%);
+}
+.skillcard span{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.skillicon{
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.65rem;
+    background: #2a2252 ;
+    border: 1.5px  solid #6852ba;
+    position: absolute;
+    top:-1rem;
+    left: -1rem;
+}
+.skillicon img{
+    width: 2.4rem;
+    height: auto;
+    object-fit: cover;
+}
+@media (max-width:1025px){
+    .skillcard{
+        padding: 2rem;
+    }
+    .skillcard span{
+        font-size: 1.3rem;
+    }
+    .skillicon{
+        width: 3rem;
+        height: 3rem;
+    }
+    .skillicon img{
+        width: 1.8rem;
+    }
+}
+@media screen and (max-width:768px) {
+    .skillcard span{
+        font-size:0.9rem;
+    }
+}

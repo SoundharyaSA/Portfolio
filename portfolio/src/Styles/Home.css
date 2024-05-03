@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #060417;
+    color: #fff;
+}
+.navpart{
+    background-color: rgba(0,0,0,0.1);
+    padding: 0 40px;
+    position:sticky;
+    top:0;
+    z-index: 30;
+    backdrop-filter: blur(50px);
+}
+.list{
+    max-width: 1300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    margin: 0 auto;
+    /* background-color: aqua; */
+}
+.heading{
+   width: 400px;
+   height: auto;
+}
+.list .navui{
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      list-style: none;
+}
+.list li{
+    margin: 0 20px;
+
+}
+.menu{
+    text-decoration: none;
+    font-size: large;
+    font-weight: 500;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+}
+.menu::before{
+    content: "";
+    width: 32px;
+    height: 3.2px;
+    background: linear-gradient(90deg,#a993fe 0%, #7e61e7 100%);
+    border-radius: 8px;
+    position: absolute;
+    bottom: -7px;
+    opacity: 0;
+    transform: translateX(-24px);
+    transition: all 0.3s ease;
+}
+.menu:hover::before{
+    width: 100%;
+    transform: translateX(0);
+    opacity: 1;
+}
+.contact-btn{
+    font-size: 19px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: linear-gradient(90deg, #a993fe 0%, #7e61e7 100%);
+    padding: 9px 32px;
+    border: none;
+    outline: 9px solid transparent;
+    border-radius: 1px;
+    cursor: pointer;
+    transition: all 0.3 ease;
+  
+}
+.contact-btn:hover{
+    color: #a993fe;
+    background: #000;
+    outline: 2px solid #a993fe ;
+}
+.menu-btn{
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 7px;
+    color: #fff;
+    background: linear-gradient(90deg, #a993fe -0.13%,#7e61e7 99.87%);
+    line-height: 0;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    margin: 0px 10px;
+    display: none;
+}
+.menu-btn:hover{
+    color: #a993fe;
+    background: #000;
+    border: 1px solid #a993fe;
+
+}
+.icon{
+    background-color:#a993fe;
+    color: #000;
+    font-weight: bolder;
+ 
+}
+
+@media screen and (max-width:425px) {
+    .heading{
+        width: 5rem;
+        height: auto;
+    }
+    .menu-btn{
+        height: 30px;
+        width: 30px;
+    } 
+}
+@media  screen and (max-width:769px) {
+.menu-btn{
+    display: block;
+}
+.list .navui{
+    display:none;
+}
+    
+}
+@media screen and (max-width:1325px) {
+    .navpart{
+        padding: 0 40px;
+    }
+    
+}
